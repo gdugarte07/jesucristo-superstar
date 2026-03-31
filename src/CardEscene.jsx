@@ -1,5 +1,5 @@
 // src/CardEscene.jsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Container, Card, Button, Badge } from 'react-bootstrap';
 // 1. Importamos useNavigate para poder cambiar de ruta
 import { useNavigate } from 'react-router-dom'; 
@@ -10,6 +10,13 @@ export default function CardEscene() {
   const [currentIndex, setCurrentIndex] = useState(0);
   // 2. Inicializamos la función de navegación
   const navigate = useNavigate(); 
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Le da un deslizamiento suave y elegante
+    });
+  }, [currentIndex]);
 
   const nextSong = () => {
     if (currentIndex < songsData.length - 1) {
