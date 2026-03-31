@@ -46,6 +46,16 @@ export default function ProductionCredits() {
 
           <hr className="border-secondary my-4" />
 
+          {/* NUEVA Sección de Contenido Digital y Redes Sociales */}
+          <div className="mb-4">
+            <h5 className="text-warning text-uppercase fw-bold" style={{ letterSpacing: '2px' }}>Contenido Digital y Redes Sociales</h5>
+            <p className="text-light fs-5 mb-0">
+              Geremy Dugarte • Ronald Garcia • Johan Romero
+            </p>
+          </div>
+
+          <hr className="border-secondary my-4" />
+
           {/* Sección de Apoyo */}
           <div className="mb-5">
             <h5 className="text-warning text-uppercase fw-bold mb-3" style={{ letterSpacing: '2px' }}>Personal de Apoyo</h5>
@@ -70,8 +80,8 @@ export default function ProductionCredits() {
           <div className="bg-dark bg-opacity-50 p-4 rounded mb-5 border border-secondary">
             <h5 className="text-warning text-uppercase fw-bold mb-3" style={{ letterSpacing: '2px' }}>Agradecimientos Especiales</h5>
             <div className="text-light text-opacity-75" style={{ fontSize: '0.95rem', lineHeight: '1.8' }}>
-              Luigys Burger • Centro Clínico "Marcial Ríos Morillo" <br />
-              Lic. Eli Saul Rojas • By Shein K Mérida <br />
+              Luigys Burger • Centro Clínico "Dr. Marcial Ríos Morillo" <br />
+              Lcdo. Eli Saul Rojas • By Shein K Mérida <br />
               "Las empanadas de mi Abuela" de Luis Arellano • PK Style Store
             </div>
           </div>
