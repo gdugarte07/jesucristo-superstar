@@ -1,0 +1,119 @@
+/* src/App.css */
+body {
+  margin: 0;
+  background-color: #0a0a0a; 
+  color: #e0e0e0;
+  font-family: 'Arial', sans-serif;
+}
+
+.theater-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  
+  /* Aquí está la magia: Un gradiente oscuro sobre una imagen de desierto/rocas */
+  background-image: 
+    linear-gradient(to bottom, rgba(15, 12, 10, 0.5), rgba(5, 5, 5, 0.5)),
+    url('cruz.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Mantiene el fondo quieto si haces scroll */
+}
+
+.title-glow {
+  color: #ffca28; /* Tono dorado/arena más vivo */
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  /* Doble sombra para un efecto de luces de neón/teatro más intenso */
+  text-shadow: 0 0 15px rgba(255, 193, 7, 0.6), 0 0 30px rgba(255, 87, 34, 0.4);
+  margin-bottom: 2.5rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.song-card {
+  /* Hacemos la tarjeta ligeramente transparente con un desenfoque de fondo */
+  background-color: rgba(20, 18, 18, 0.75) !important; 
+  backdrop-filter: blur(8px); /* Efecto de vidrio ahumado */
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Borde sutil dorado/cobrizo */
+  border: 1px solid rgba(255, 193, 7, 0.2) !important; 
+  
+  /* Sombra más amplia y dramática */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 20px rgba(255, 193, 7, 0.05) !important;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Efecto suave al cambiar de canción */
+.song-card-body {
+  animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98) translateY(10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@media (max-width: 768px) {
+  
+  /* 1. Reducimos el relleno general para aprovechar la pantalla */
+  .theater-container {
+    padding: 1rem 0.5rem; 
+  }
+
+  /* Las tarjetas no necesitan tanto margen interno en teléfonos */
+  .song-card {
+    padding: 1.5rem !important; 
+  }
+
+  /* 2. Achicamos la tipografía gigante para que no se corte la palabra */
+  .title-glow {
+    font-size: 2.2rem;
+    letter-spacing: 2px; /* Menos espacio entre letras para ahorrar ancho */
+    margin-bottom: 1.5rem;
+  }
+
+  h1.display-3, h1.display-4, h1.display-5 {
+    font-size: 2rem !important;
+  }
+
+  /* 3. Reducimos la letra del contenido (elenco, descripciones) */
+  .fs-5, .text-light.fs-5 {
+    font-size: 1rem !important; /* Bajamos de fs-5 a un tamaño normal */
+    line-height: 1.5 !important; /* Ajustamos el interlineado para no hacer scroll infinito */
+  }
+
+  /* 4. Achicamos los márgenes verticales enormes */
+  .mb-5 {
+    margin-bottom: 2rem !important;
+  }
+
+  .p-4, .p-md-5 {
+    padding: 1.5rem !important;
+  }
+
+  /* 5. Aseguramos que los botones ocupen todo el ancho y no se aplasten */
+  .card-footer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+  .card-footer .btn {
+    width: 100%;
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .card-footer .btn:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 6. Elenco: Aseguramos que TODO se fuerce a una sola columna */
+  .song-card ul {
+    column-count: 1 !important;
+  }
+}
