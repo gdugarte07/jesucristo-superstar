@@ -85,7 +85,7 @@ export default function CastCredits() {
               <li>Keily Jerez</li><li>Estefania La Cruz</li><li>Orliana Rangel</li>
               <li>Arom Paredes</li><li>Gabriel Moreno</li><li>Andryu Castillo</li>
               <li>Alejandro Fernández</li><li>Johan Romero</li><li>Ronald García</li>
-              <li>Sebastian</li><li>Jhon Meza</li><li>Yendri Saabedra</li>
+              <li>Sebastian Chacón</li><li>Jhon Meza</li><li>Yendri Saabedra</li>
             </ul>
           </div>
 
