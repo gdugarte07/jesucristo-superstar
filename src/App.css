@@ -17,7 +17,7 @@ body {
   /* Aquí está la magia: Un gradiente oscuro sobre una imagen de desierto/rocas */
   background-image: 
     linear-gradient(to bottom, rgba(15, 12, 10, 0.5), rgba(5, 5, 5, 0.5)),
-    url('cruz.jpg');
+    url('/cruz.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Mantiene el fondo quieto si haces scroll */
